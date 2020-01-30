@@ -3,7 +3,6 @@ class Ktunnel < Formula
   desc "Network tunneling tool for kubernetes."
   homepage "https://github.com/omrikiei/ktunnel"
   version "1.1.4"
-  head "https://github.com/omrikiei/ktunnel.git"
   bottle :unneeded
 
   if OS.mac?
@@ -16,11 +15,15 @@ class Ktunnel < Formula
     end
   end
   
+  head "https://github.com/omrikiei/ktunnel.git"
+  ...
+
   def install
     bin.install "ktunnel"
   end
 
   test do
     system "#{bin}/program version"
+    ...
   end
 end
