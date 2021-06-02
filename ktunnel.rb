@@ -24,11 +24,10 @@ class Ktunnel < Formula
   head "https://github.com/omrikiei/ktunnel.git"
 
   def install
-    system "go mod tidy"
-    system "CGO_ENABLED=0 go buid -s -w"
+    bin.install "ktunnel"
   end
 
   test do
-    system "#{bin}/ktunnel -v"
+    system "#{bin}/program version"
   end
 end
