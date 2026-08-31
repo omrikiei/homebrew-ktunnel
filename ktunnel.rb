@@ -5,21 +5,21 @@
 class Ktunnel < Formula
   desc "Network tunneling tool for kubernetes."
   homepage "https://github.com/omrikiei/ktunnel"
-  version "2.4.0"
+  version "2.4.1"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.0/ktunnel_2.4.0_Darwin_x86_64.tar.gz"
-      sha256 "de851697fac19f56bca135d313718f268157d6b2a63f9dd0cf58323a96f16bf9"
+      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.1/ktunnel_2.4.1_Darwin_x86_64.tar.gz"
+      sha256 "541c02ee794763e3d76e77bc9b0dfbb395fb8f70776242ff02a7482e620d578d"
 
       define_method(:install) do
         bin.install "ktunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.0/ktunnel_2.4.0_Darwin_arm64.tar.gz"
-      sha256 "9bbe18fd0698f84b77ddbde9050f543ec73da3d748ad2d0a59c05d6b2fd60d53"
+      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.1/ktunnel_2.4.1_Darwin_arm64.tar.gz"
+      sha256 "8870d7ba92825d6686a8355a37f798f1090a60f045e3637b708e042d93ccc0c2"
 
       define_method(:install) do
         bin.install "ktunnel"
@@ -29,15 +29,15 @@ class Ktunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.0/ktunnel_2.4.0_Linux_x86_64.tar.gz"
-      sha256 "a6520cc2032773cd3c45352839412da15946ab34929ed038900cf04212190300"
+      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.1/ktunnel_2.4.1_Linux_x86_64.tar.gz"
+      sha256 "63d4db962314289d300d119cdd9a8427adadf2e1ad20c87cdd3d272abc3d4fdb"
       define_method(:install) do
         bin.install "ktunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.0/ktunnel_2.4.0_Linux_arm64.tar.gz"
-      sha256 "aedace0d5e2899b1d292d65c2fe04854f74deeb21ca5306a8b37cceb6e8393ab"
+      url "https://github.com/omrikiei/ktunnel/releases/download/v2.4.1/ktunnel_2.4.1_Linux_arm64.tar.gz"
+      sha256 "58fbbbe56504314ea0b77721b0474f7f76310ef627bcc0e1680d709a2151b430"
       define_method(:install) do
         bin.install "ktunnel"
       end
